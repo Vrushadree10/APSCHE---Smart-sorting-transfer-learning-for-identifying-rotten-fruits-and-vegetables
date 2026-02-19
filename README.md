@@ -1,72 +1,76 @@
-Ah — you want the **README.md file as raw Markdown code**, not explanation.
-Here it is. **Copy–paste exactly into `README.md`** 👇
-
-```md
-# 🍎 Smart Sorting: Fresh vs Rotten Fruit & Vegetable Classification  
-**Using Transfer Learning (MobileNetV2)**
+# smart-sorting-transfer-learning-for-identifying-rotten-fruits-and-vegetables
 
 ---
 
-## 📌 Project Overview
+# 🍎 Smart Sorting: Rotten vs Fresh Fruit & Vegetable Classification Using Transfer Learning
 
-**Smart Sorting** is a deep learning–based web application that classifies fruits and vegetables as **fresh** or **rotten** across **16 categories**.  
-The system uses **transfer learning with MobileNetV2** and a **Flask backend** to deliver fast and accurate predictions in real time.
-
-This project aims to automate quality inspection, reduce post-harvest food waste, and improve efficiency in agricultural and retail supply chains.
+Smart Sorting is a lightweight deep learning web application that classifies fruits and vegetables as **fresh** or **rotten** across 16 categories. It uses **transfer learning** with **MobileNetV2** and a modern **Flask** backend to deliver fast and accurate predictions in real time.
 
 ---
 
-## 🎯 Problem Statement
+## 🧠 About the Project
 
-Manual inspection of fruits and vegetables is:
-- Time-consuming  
-- Error-prone  
-- Not scalable  
+This system helps automate the classification of produce images to support smarter food packaging, reduce post-harvest waste, and enhance quality control in agriculture and retail.
 
-Smart Sorting automates this process using image-based classification powered by deep learning.
+It can identify:
+
+* 🟢 **Fresh Produce** (Apple, Banana, Tomato, etc.)
+* 🔴 **Spoiled Produce** (Rotten Apple, Rotten Tomato, etc.)
 
 ---
 
-## 🧠 Solution Approach
+## 🚀 How It Works
 
-1. User uploads an image of a fruit or vegetable  
-2. Image is preprocessed using OpenCV  
-3. A fine-tuned MobileNetV2 model predicts:
-   - Fresh / Rotten
-   - Class label
-   - Confidence score  
-4. Results are displayed instantly through a web interface  
+1. **Upload** an image of a fruit or vegetable.
+2. The app uses **deep learning** to analyze the image.
+3. A **prediction** (fresh/rotten + class name) is returned, along with a confidence score and image preview.
 
 ---
 
 ## ✅ Key Features
 
-- Classifies **16 classes** (8 fresh + 8 rotten)
-- Uses **transfer learning** for improved accuracy and faster training
-- Lightweight and efficient **MobileNetV2 architecture**
-- Real-time prediction using **Flask**
-- Image preprocessing with **OpenCV**
-- Simple and clean **HTML/CSS frontend**
-- Inline image preview for verification
+* 🔍 **Classifies 16 produce types** (8 fresh + 8 rotten)
+* ⚙️ **Transfer learning** with MobileNetV2 for optimized speed and accuracy
+* 🫼 Built-in **OpenCV image preprocessing**
+* 💻 **Flask web interface** with real-time feedback
+* 🎨 Clean, modern **HTML/CSS-based frontend**
+* 📷 Inline **image preview** for visual confirmation
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠 Tech Stack
 
-| Layer | Technologies |
-|------|-------------|
-| Model | TensorFlow, Keras, MobileNetV2 |
-| Backend | Python, Flask |
-| Image Processing | OpenCV |
-| Frontend | HTML5, CSS3 |
+| Layer         | Technologies                    |
+| ------------- | ------------------------------- |
+| Model         | TensorFlow / Keras, MobileNetV2 |
+| Backend       | Python, Flask                   |
+| Preprocessing | OpenCV                          |
+| Frontend      | HTML5, CSS3                     |
+
+---
+
+## 🧪 Run It Locally
+
+Follow these steps to run the app on your machine:
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Vrushadree10/smart-sorting-transfer-learning-for-identifying-rotten-fruits-and-Vegetables
+cd smart-sorting-transfer-learning-for-identifying-rotten-fruits-and-Vegetables
+
+```
+Run the app.py file
+
+Then, open your browser at:
+👉 **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 
 ---
 
 ## 📁 Project Structure
 
 ```
-
-smart-sorting/
+Project File/
 ├── model/
 │   ├── fruit_classifier.h5
 │   └── class_indices.json
@@ -77,86 +81,48 @@ smart-sorting/
 │   └── style.css
 ├── requirements.txt
 └── README.md
-
 ```
 
 ---
 
-## 📊 Dataset Details
+## 📊 Dataset Overview
 
-- **Total Images**: 32,769  
-- **Number of Classes**: 16  
-  - 8 Fresh categories  
-  - 8 Rotten categories  
+* **Total Images**: 32,769
+* **Classes**: 16 (8 fresh + 8 rotten types)
+* **Split**:
 
-### Dataset Split
-```
+  * `dataset/train/`
+  * `dataset/test/`
 
-dataset/
-├── train/
-└── test/
+> Sample class indices:
 
-````
-
-### Sample Class Mapping
 ```json
 {
   "freshapples": 0,
   "freshbanana": 1,
-  "...": "...",
+  ...,
   "rottentomato": 15
 }
-````
-
----
-
-## 🧠 Model Information
-
-* **Base Model**: MobileNetV2
-* **Training Strategy**: Fine-tuning with data augmentation
-* **Test Accuracy**: ~95%
-* **Saved Model**: `fruit_classifier.h5`
-
-> Accuracy may vary depending on image quality, lighting, and background.
-
----
-
-## 🚀 How to Run the Project Locally
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/Vrushadree10/smart-sorting-transfer-learning-for-identifying-rotten-fruits-and-Vegetables
-cd smart-sorting-transfer-learning-for-identifying-rotten-fruits-and-Vegetables
-```
-
-### 2️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3️⃣ Run the Application
-
-```bash
-python app.py
-```
-
-### 4️⃣ Open in Browser
-
-```
-http://127.0.0.1:5000
 ```
 
 ---
 
-## 🌍 Real-World Applications
+## 🧠 Model Insights
 
-* Automated quality inspection systems
-* Retail and wholesale produce analysis
-* Smart agriculture solutions
-* Reduction of food waste
-* Supply chain quality monitoring
+* **Model**: MobileNetV2 (fine-tuned)
+* **Accuracy**: \~95%
+* **Loss**: Low, optimized via tuning and augmentation
+* **Saved As**: `fruit_classifier.h5`
+
+---
+
+## 🎯 Real-World Impact
+
+The solution targets a common issue in food supply chains — the inability to quickly identify spoiled produce. Smart Sorting provides:
+
+* ✅ Automated quality checks via image
+* ✅ Real-time assistance to vendors, farmers, and retailers
+* ✅ Reduced food waste and higher consumer safety
 
 ---
 
@@ -171,18 +137,8 @@ http://127.0.0.1:5000
 
 ## 📬 Contact
 
-For feedback or collaboration:
+For feedback or collaboration, reach out at:
 
-* 📧 Email: **[kbsv2004@gmail.com](mailto:kbsv2004@gmail.com)**
-* 🔗 LinkedIn: [Sai Vrushadree](https://www.linkedin.com/in/sai-vrushadree-715012255/)
-
-```
-
-If you want, I can:
-- Strip emojis for **academic submission**
-- Add **badges (accuracy, Python, Flask)**
-- Make it **IEEE / final-year-project ready**
-- Tighten wording for **resume & recruiters**
-
-Say what’s next.
-```
+📧 **[kbsv2004@gmail.com](mailto:kbsv2004@gmail.com)**
+🔗 [LinkedIn – Sai Vrushadree](https://www.linkedin.com/in/sai-vrushadree-715012255/)
+#
