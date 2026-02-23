@@ -1,3 +1,11 @@
+## 👥 Contributors
+* **Team ID : LTVIP2026TMIDS54378**
+* **Karapakula Balaji Sai Vrushadree**
+* **D Bhanu Prakash**
+* **K Bhanu Prakash**
+* **S Bindusagar** 
+
+
 # smart-sorting-transfer-learning-for-identifying-rotten-fruits-and-vegetables
 
 ---
@@ -124,14 +132,6 @@ The solution targets a common issue in food supply chains — the inability to q
 * ✅ Real-time assistance to vendors, farmers, and retailers
 * ✅ Reduced food waste and higher consumer safety
 
----
-
-## 👥 Contributors
-
-* **Karapakula Balaji Sai Vrushadree**
-* **D Bhanu Prakash**
-* **K Bhanu Prakash**
-* **S Bindusagar**
 
 ---
 
